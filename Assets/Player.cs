@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
+// 自機を制御するためのスクリプト
+public class Player : MonoBehaviour
+{
 
+	// 破壊されたら呼ばれるメソッド
 	void OnDestroy()
 	{
-		GameObject.Find ("Game").GetComponent<GameController> ().GameOver();
+		// 自機が破壊されたらゲームオーバー画面を表示する
+		GameObject.FindObjectOfType<GameController> ().GameOver();
 	}
 
 }

@@ -2,16 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// キーボード操作で自機を動かすためのスクリプト
 public class Move : MonoBehaviour
 {
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
+    // 毎フレーム呼ばれる処理
     void Update()
     {
         if (Input.GetKey(KeyCode.LeftArrow))
