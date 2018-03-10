@@ -14,12 +14,12 @@ public class BulletFactory : MonoBehaviour
     // 毎フレーム呼ばれる処理
     void Update()
     {
+        // タイマーを加算する
+        timer += Time.deltaTime;
+
         // スペースキーが押されたら
         if (Input.GetKey(KeyCode.Space))
         {
-            // タイマーを加算する
-            timer += Time.deltaTime;
-
             // タイマーが0.2秒以上経過していたら
             if (timer >= 0.2f)
             {
